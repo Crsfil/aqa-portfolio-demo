@@ -10,7 +10,7 @@ import static io.restassured.RestAssured.given;
 public class ProjectClient {
     @Step("Get projects")
     public List<ProjectDto> getProjects(String token) {
-        Map<String, List<ProjectDto>> response = given()
+        return given()
             .auth().oauth2(token)
         .when()
             .get("/api/projects")
