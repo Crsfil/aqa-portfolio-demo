@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+  background: #f4f6f8;
+}
+
+.shell {
+  width: min(1120px, calc(100vw - 32px));
+  margin: 32px auto;
+}
+
+.panel,
+.create-card,
+.admin-card {
+  background: #ffffff;
+  border: 1px solid #d9e0e7;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.login-panel {
+  max-width: 420px;
+  margin: 80px auto 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 12px;
+}
+
+label {
+  display: block;
+  margin: 14px 0 6px;
+  font-weight: 700;
+}
+
+input,
+select,
+button {
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid #c7d0da;
+  font: inherit;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0 10px;
+  background: #ffffff;
+}
+
+button {
+  padding: 0 14px;
+  border: none;
+  color: #ffffff;
+  background: #2563eb;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+#loginButton {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.muted {
+  color: #64748b;
+}
+
+.hint {
+  margin-top: 18px;
+  padding: 12px;
+  border-radius: 6px;
+  background: #eef2ff;
+  color: #334155;
+  font-size: 14px;
+}
+
+.error {
+  min-height: 20px;
+  color: #b91c1c;
+}
+
+.success {
+  min-height: 20px;
+  color: #047857;
+}
+
+.hidden {
+  display: none;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+}
+
+.item {
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 12px;
+  background: #f8fafc;
+}
+
+.item strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #e0f2fe;
+  color: #075985;
+  font-size: 12px;
+}
+
+.create-card,
+.admin-card {
+  margin-top: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 180px 120px;
+  gap: 10px;
+}
+
+@media (max-width: 760px) {
+  .grid,
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    display: block;
+  }
+
+  #logoutButton {
+    margin-top: 12px;
+  }
+}

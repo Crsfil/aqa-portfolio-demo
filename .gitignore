@@ -1,0 +1,10 @@
+.DS_Store
+.idea/
+*.iml
+node_modules/
+.gradle/
+build/
+out/
+allure-results/
+allure-report/
+target/

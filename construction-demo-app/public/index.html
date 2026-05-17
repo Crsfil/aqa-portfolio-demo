@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Construction Demo App</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="panel login-panel" data-testid="login-panel">
+        <h1>Construction Demo</h1>
+        <p class="muted">Demo app for UI, API and RBAC autotests.</p>
+
+        <label for="username">Username</label>
+        <input id="username" data-testid="username-input" value="manager" autocomplete="username">
+
+        <label for="password">Password</label>
+        <input id="password" data-testid="password-input" value="manager123" type="password" autocomplete="current-password">
+
+        <button id="loginButton" data-testid="login-button">Sign in</button>
+        <p id="loginError" class="error" data-testid="login-error"></p>
+
+        <div class="hint">
+          <strong>Users:</strong>
+          admin/admin123, manager/manager123, viewer/viewer123
+        </div>
+      </section>
+
+      <section class="panel app-panel hidden" data-testid="dashboard-panel">
+        <div class="topbar">
+          <div>
+            <h2>Projects dashboard</h2>
+            <p id="currentUser" class="muted" data-testid="current-user"></p>
+          </div>
+          <button id="logoutButton" data-testid="logout-button">Logout</button>
+        </div>
+
+        <div class="grid">
+          <section>
+            <h3>Projects</h3>
+            <div id="projects" class="list" data-testid="projects-list"></div>
+          </section>
+
+          <section>
+            <h3>Documents</h3>
+            <div id="documents" class="list" data-testid="documents-list"></div>
+          </section>
+        </div>
+
+        <section class="create-card" data-testid="create-document-panel">
+          <h3>Create document</h3>
+          <div class="form-row">
+            <input id="documentTitle" data-testid="document-title-input" placeholder="Document title">
+            <select id="documentType" data-testid="document-type-select">
+              <option value="ACT">ACT</option>
+              <option value="ESTIMATE">ESTIMATE</option>
+              <option value="CHECKLIST">CHECKLIST</option>
+            </select>
+            <button id="createDocumentButton" data-testid="create-document-button">Create</button>
+          </div>
+          <p id="documentError" class="error" data-testid="document-error"></p>
+          <p id="documentSuccess" class="success" data-testid="document-success"></p>
+        </section>
+
+        <section class="admin-card hidden" data-testid="admin-panel">
+          <h3>Admin users</h3>
+          <button id="loadUsersButton" data-testid="load-users-button">Load users</button>
+          <div id="users" class="list" data-testid="users-list"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
